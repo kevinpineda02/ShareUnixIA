@@ -19,7 +19,7 @@ function toggleChat() {
     floatingIcons.classList.toggle('hide');
 }
 
-const BACKEND_URL = 'http://localhost:3001/api/together-ai';
+const BACKEND_URL = 'https://shareunixia-api.onrender.com';
 let isProcessing = false;
 const sessionId = 'session_' + Date.now() + Math.random().toString(36).substring(2, 15);
 
@@ -68,7 +68,7 @@ async function sendMessage() {
     let accumulatedResponse = '';
 
     try {
-        const res = await fetch(BACKEND_URL, {
+        const res = await fetch(`${BACKEND_URL}/api/together-ai`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: input, sessionId: sessionId, stream: true }),
