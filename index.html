@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareUnixIA - Tu Banca Personal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link type="image/png" rel="icon" href="../Resources/img//logo.jpg">
+</head>
+
+<body>
+    <div class="sidebar collapsed" id="sidebar">
+        <div class="logo" id="toggle-btn">
+            <i class="fas fa-building-columns"></i>
+            <span class="logo-text">ShareUnixIA</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#" data-tooltip="Dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="#" data-tooltip="Cuentas"><i class="fas fa-wallet"></i><span>Cuentas</span></a></li>
+            <li><a href="#transactions-section" data-tooltip="Transacciones"><i
+                        class="fas fa-money-bill-transfer"></i><span>Transacciones</span></a></li>
+            <li><a href="#movements-section" data-tooltip="Movimientos"><i
+                        class="fas fa-list"></i><span>Movimientos</span></a></li>
+            <li><a href="#" data-tooltip="Pagos y Servicios"><i class="fas fa-receipt"></i><span>Pagos y Servicios</span></a></li>
+            <li><a href="#" data-tooltip="Inversiones"><i class="fas fa-chart-line"></i><span>Inversiones</span></a></li>
+            <li><a href="#" data-tooltip="Créditos"><i class="fas fa-hand-holding-dollar"></i><span>Créditos</span></a></li>
+            <li><a href="#settings-section" data-tooltip="Configuración"><i class="fas fa-cog"></i><span>Configuración</span></a></li>
+        </ul>
+
+        <div class="logout">
+            <a href="#" data-tooltip="Cerrar sesión"><i class="fas fa-sign-out-alt"></i><span>Cerrar sesión</span></a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header class="dashboard-header">
+            <h1>Bienvenido a ShareUnixIA</h1>
+            <div class="user-profile">
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+        <section class="account-summary-section">
+            <h2>Resumen de Cuentas</h2>
+            <div class="account-cards-container">
+                <div class="account-card savings">
+                    <h3>Cuenta de Ahorros</h3>
+                    <p class="account-number">**** **** **** 1234</p>
+                    <p class="balance">$ 5,230.50</p>
+                    <p class="currency">USD</p>
+                    <button class="view-details-btn">Ver Detalles</button>
+                </div>
+                <div class="account-card checking">
+                    <h3>Cuenta Corriente</h3>
+                    <p class="account-number">**** **** **** 5678</p>
+                    <p class="balance">$ 1,890.75</p>
+                    <p class="currency">USD</p>
+                    <button class="view-details-btn">Ver Detalles</button>
+                </div>
+                <div class="account-card credit-card">
+                    <h3>Tarjeta de Crédito</h3>
+                    <p class="account-number">**** **** **** 9012</p>
+                    <p class="balance-due">Deuda: $ 750.00</p>
+                    <p class="limit">Límite: $ 2,500.00</p>
+                    <button class="view-details-btn">Pagar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-actions-section">
+            <h2>Acciones Rápidas</h2>
+            <div class="action-buttons-container">
+                <button class="action-btn"><i class="fas fa-exchange-alt"></i> Transferir</button>
+                <button class="action-btn"><i class="fas fa-credit-card"></i> Pagar Tarjeta</button>
+                <button class="action-btn"><i class="fas fa-lightbulb"></i> Pagar Servicios</button>
+                <button class="action-btn"><i class="fas fa-money-check-alt"></i> Solicitar Crédito</button>
+                <button class="action-btn"><i class="fas fa-plus-circle"></i> Nueva Cuenta</button>
+            </div>
+        </section>
+
+        <section class="latest-movements-section" id="movements-section">
+            <h2>Últimos Movimientos</h2>
+            <div class="movements-list">
+                <div class="movement-item">
+                    <span class="movement-desc">Pago de Electricidad</span>
+                    <span class="movement-date">05/Jul/2025</span>
+                    <span class="movement-amount debit">-$55.20</span>
+                </div>
+                <div class="movement-item">
+                    <span class="movement-desc">Depósito de Salario</span>
+                    <span class="movement-date">01/Jul/2025</span>
+                    <span class="movement-amount credit">+$800.00</span>
+                </div>
+                <div class="movement-item">
+                    <span class="movement-desc">Compra en Supermercado</span>
+                    <span class="movement-date">03/Jul/2025</span>
+                    <span class="movement-amount debit">-$78.50</span>
+                </div>
+            </div>
+            <button class="view-all-movements-btn">Ver todos los movimientos</button>
+        </section>
+
+        <section class="news-offers-section">
+            <h2>Noticias y Ofertas</h2>
+            <div class="news-cards-container">
+                <div class="news-card">
+                    <h3>¡Nueva Tasa en Depósitos a Plazo!</h3>
+                    <p>Invierte a 12 meses y gana más. Consulta los detalles.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="news-card">
+                    <h3>Consejos de Seguridad Digital</h3>
+                    <p>Aprende a proteger tus datos bancarios en línea.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="settings-section" id="settings-section">
+            <h2>Configuración</h2>
+            <p>Aquí podrás gestionar tus preferencias, seguridad y datos personales.</p>
+            <button class="action-btn">Ir a Configuración Completa</button>
+        </section>
+
+    </div>
+
+    <div class="floating-icons">
+        <button id="chatToggle" title="Asistente IA"><i class="fas fa-robot"></i></button>
+        <button title="Centro de ayuda"><i class="fas fa-circle-question"></i></button>
+    </div>
+
+    <div class="chat-sidebar" id="chatSidebar">
+        <div class="chat-header">
+            ShareUnixIA
+            <span style="cursor:pointer;" onclick="toggleChat()">&times;</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-bubble">
+                    Hola, soy tu asistente virtual. ¿En qué puedo ayudarte?
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+            <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="status-message" id="statusMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
