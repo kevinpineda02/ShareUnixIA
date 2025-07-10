@@ -673,7 +673,7 @@ body.sidebar-collapsed .main-content {
 
 .chat-header {
     background-color: #242424;
-    color: #fff;
+    color: rgb(0, 204, 102);
     padding: 15px 20px;
     font-weight: bold;
     display: flex;
